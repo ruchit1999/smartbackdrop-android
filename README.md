@@ -1,4 +1,22 @@
-# 🎉 SmartBackdrop Android SDK v1.0.0 - Initial Release
+# SmartBackdrop Android SDK
+
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.9.0-blue.svg)](https://kotlinlang.org)
+[![Android](https://img.shields.io/badge/Android-API%2021+-green.svg)](https://developer.android.com)
+[![JitPack](https://jitpack.io/v/smartbackdrop/smartbackdrop-android.svg)](https://jitpack.io/#smartbackdrop/smartbackdrop-android)
+
+Auto-generates context-aware backdrops (gradient/blur/mirror/solid) from images to fill letterboxing gaps and keep text readable. Perfect for video players, image galleries, and media apps.
+
+## 🖼️ Demo
+
+<div align="center">
+  <img src="resource/Screenshot_1.png" alt="SmartBackdrop Demo - Strategy Selection" width="300" />
+  <img src="resource/Screenshot_2.png" alt="SmartBackdrop Demo - Live Preview" width="300" />
+</div>
+
+*Interactive strategy selection and live backdrop preview with different effects*
+
+## 🎉 SmartBackdrop Android SDK v1.0.0 - Initial Release
 
 ## 🚀 Release Title
 **SmartBackdrop Android SDK v1.0.0 - Intelligent Image Backdrops for Android Apps**
@@ -127,6 +145,15 @@ Included with this release is a comprehensive sample app that demonstrates:
 - Interactive controls for testing
 - Live preview of backdrop effects
 - Contrast ratio visualization
+
+#### 🖼️ Demo Screenshots
+
+<div align="center">
+  <img src="resource/Screenshot_1.png" alt="SmartBackdrop Demo - Strategy Selection" width="300" />
+  <img src="resource/Screenshot_2.png" alt="SmartBackdrop Demo - Live Preview" width="300" />
+</div>
+
+*Left: Interactive strategy selection with real-time controls | Right: Live backdrop preview with different effects*
 
 ### 🔧 Configuration Options
 

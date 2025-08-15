@@ -53,7 +53,7 @@ fun SmartBackdropDemo() {
  * State data class for the demo.
  */
 data class DemoState(
-    val imageUrl: String = "https://picsum.photos/512/1024",
+    val imageUrl: String = "https://fastly.picsum.photos/id/760/512/1080.jpg?hmac=lt6xWbnKDhpd5NTmzKV7pedcHEw5VQ9VHx0Y7-ZHHM8",
     val strategy: Strategy = Strategy.PaletteSolid,
     val edgePct: Float = 0.2f,
     val enforceContrast: Boolean = false
