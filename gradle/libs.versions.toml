@@ -1,7 +1,7 @@
 [versions]
 # Build tools
 agp = "8.7.0"
-kotlin = "1.9.24"
+kotlin = "2.2.10"
 compose-compiler = "1.5.14"
 compose-bom = "2024.10.01"
 
