@@ -1,0 +1,33 @@
+jdk:
+  - openjdk17
+
+before_install:
+  - echo "Setting up Android SDK..."
+  - export ANDROID_HOME=$HOME/android-sdk
+  - export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+  - mkdir -p $ANDROID_HOME
+  - wget -q https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -O commandlinetools.zip
+  - unzip -q commandlinetools.zip -d $ANDROID_HOME
+  - mkdir -p $ANDROID_HOME/cmdline-tools
+  - mv $ANDROID_HOME/cmdline-tools $ANDROID_HOME/cmdline-tools/latest
+  - yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
+  - $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
+
+install:
+  - echo "Installing dependencies..."
+  - ./gradlew dependencies
+
+script:
+  - echo "Building project..."
+  - ./gradlew clean build
+  - echo "Publishing to JitPack..."
+  - ./gradlew publishToMavenLocal
+
+after_success:
+  - echo "Build completed successfully!"
+
+# Publish all modules
+publish:
+  - smartbackdrop-core
+  - smartbackdrop-compose  
+  - smartbackdrop-views 

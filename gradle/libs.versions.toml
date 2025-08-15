@@ -1,0 +1,75 @@
+[versions]
+# Build tools
+agp = "8.7.0"
+kotlin = "1.9.24"
+compose-compiler = "1.5.14"
+compose-bom = "2024.10.01"
+
+# Dependencies
+coil = "2.7.0"
+activity-compose = "1.9.2"
+core-ktx = "1.13.1"
+appcompat = "1.7.1"
+junit = "4.13.2"
+robolectric = "4.15.1"
+androidx-test-core = "1.7.0"
+androidx-test-ext = "1.3.0"
+espresso = "3.7.0"
+accompanist = "0.34.0"
+
+# Project
+version-name = "0.1.0"
+min-sdk = "21"
+target-sdk = "35"
+compile-sdk = "35"
+
+[libraries]
+# Compose
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+# Image loading
+coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+
+# Android
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+# Accompanist
+accompanist-placeholder = { group = "com.google.accompanist", name = "accompanist-placeholder-material", version.ref = "accompanist" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
+androidx-test-core = { group = "androidx.test", name = "core", version.ref = "androidx-test-core" }
+androidx-test-ext = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext" }
+espresso = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+[bundles]
+compose = [
+    "compose-ui",
+    "compose-material3",
+    "compose-ui-tooling-preview"
+]
+compose-debug = [
+    "compose-ui-tooling"
+]
+testing = [
+    "junit",
+    "robolectric",
+    "androidx-test-core"
+]
+android-testing = [
+    "androidx-test-ext",
+    "espresso"
+] 
