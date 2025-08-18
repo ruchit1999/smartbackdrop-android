@@ -66,13 +66,13 @@ dependencyResolutionManagement {
 // build.gradle.kts
 dependencies {
     // For Compose apps
-    implementation(project(":smartbackdrop-compose"))
+    implementation("com.github.ruchit1999:smartbackdrop-compose:0.1.0")
     
     // For View-based apps
-    implementation(project(":smartbackdrop-views"))
+    implementation("com.github.ruchit1999:smartbackdrop-views:0.1.0")
     
     // Core module (automatically included as transitive dependency)
-    // implementation(project(":smartbackdrop-core"))
+    // implementation("com.github.ruchit1999:smartbackdrop-core:0.1.0")
 }
 ```
 
@@ -186,12 +186,12 @@ Perfect for:
 
 ### 🔗 Links & Resources
 
-- **📖 Documentation**: [Full README](https://github.com/smartbackdrop/smartbackdrop-android#readme)
-- **⚡ Quick Start**: [Quick Start Guide](https://github.com/smartbackdrop/smartbackdrop-android/blob/main/QUICKSTART.md)
-- **📦 Dependency Usage**: [Dependency Guide](https://github.com/smartbackdrop/smartbackdrop-android/blob/main/DEPENDENCY_USAGE.md)
-- **🐛 Issues**: [Report Bugs](https://github.com/smartbackdrop/smartbackdrop-android/issues)
-- **💬 Discussions**: [Ask Questions](https://github.com/smartbackdrop/smartbackdrop-android/discussions)
-- **⭐ Star Repository**: [GitHub](https://github.com/smartbackdrop/smartbackdrop-android)
+- **📖 Documentation**: [Full README](https://github.com/ruchit1999/smartbackdrop-android#readme)
+- **⚡ Quick Start**: [Quick Start Guide](https://github.com/ruchit1999/smartbackdrop-android/blob/main/QUICKSTART.md)
+- **🐛 Issues**: [Report Bugs](https://github.com/ruchit1999/smartbackdrop-android/issues)
+- **💬 Discussions**: [Ask Questions](https://github.com/ruchit1999/smartbackdrop-android/discussions)
+- **⭐ Star Repository**: [GitHub](https://github.com/ruchit1999/smartbackdrop-android)
+- **📦 JitPack**: [View on JitPack](https://jitpack.io/#ruchit1999/smartbackdrop-android)
 
 ### 🙏 Acknowledgments
 
@@ -214,21 +214,37 @@ This is just the beginning! We're already planning:
 
 - **GitHub Issues**: Report bugs and request features
 - **GitHub Discussions**: Ask questions and share ideas
-- **Email**: support@smartbackdrop.dev
-- **Contributing**: [Contributing Guide](https://github.com/smartbackdrop/smartbackdrop-android/blob/main/CONTRIBUTING.md)
+- **Email**: ruchitbhagat11@gmail.com
+- **Contributing**: [Contributing Guide](https://github.com/ruchit1999/smartbackdrop-android/blob/main/CONTRIBUTING.md)
 
 ---
+
+## 📦 Publishing Status
+
+**🚧 Currently in Development**
+
+This SDK is configured for JitPack publishing. Once a release tag is pushed, it will be available as:
+
+```kotlin
+implementation("com.github.ruchit1999:smartbackdrop-compose:0.1.0")
+implementation("com.github.ruchit1999:smartbackdrop-views:0.1.0")
+```
+
+**For now, you can:**
+- Clone the repository and use local dependencies
+- Build and test the sample app
+- Follow the development progress
 
 ## 🎉 Download & Get Started
 
 **Ready to enhance your Android apps with intelligent backdrops?**
 
-1. **Add the dependency** to your project
+1. **Clone the repository** and build locally
 2. **Try the sample app** to see all features
 3. **Integrate into your app** with just a few lines of code
 4. **Share your creations** with the community!
 
-**Download the sample APK** attached to this release to see SmartBackdrop in action!
+**Build the sample app** to see SmartBackdrop in action!
 
 ---
 
