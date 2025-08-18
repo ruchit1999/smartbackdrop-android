@@ -84,6 +84,7 @@ afterEvaluate {
                     password = System.getenv("GITHUB_TOKEN") ?: project.findProperty("gpr.key") as String?
                 }
             }
+            maven { url = uri("https://jitpack.io") }
         }
     }
 }
@@ -97,6 +98,15 @@ dependencies {
     testImplementation(libs.androidx.test.core)
     androidTestImplementation(libs.androidx.test.ext)
     androidTestImplementation(libs.espresso)
+
+    // For Compose apps
+    implementation("com.github.ruchit1999:smartbackdrop-compose:0.1.0")
+    
+    // For View-based apps
+    implementation("com.github.ruchit1999:smartbackdrop-views:0.1.0")
+    
+    // Core module (automatically included)
+    // implementation("com.github.ruchit1999:smartbackdrop-core:0.1.0")
 }
 
 
