@@ -171,7 +171,7 @@ Add to your `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("com.github.smartbackdrop:smartbackdrop-compose:0.1.0")
+    implementation(project(":smartbackdrop-compose"))
 }
 ```
 

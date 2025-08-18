@@ -28,21 +28,15 @@ sed -i "s/version = \"[^\"]*\"/version = \"$NEW_VERSION\"/g" smartbackdrop-views
 
 # Update README.md
 echo "Updating README.md..."
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:$NEW_VERSION\")/g" README.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-views:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-views:$NEW_VERSION\")/g" README.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-core:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-core:$NEW_VERSION\")/g" README.md
+# No publishing dependencies to update
 
 # Update QUICKSTART.md
 echo "Updating QUICKSTART.md..."
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:$NEW_VERSION\")/g" QUICKSTART.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-views:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-views:$NEW_VERSION\")/g" QUICKSTART.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-core:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-core:$NEW_VERSION\")/g" QUICKSTART.md
+# No publishing dependencies to update
 
 # Update DEPENDENCY_USAGE.md
 echo "Updating DEPENDENCY_USAGE.md..."
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:$NEW_VERSION\")/g" DEPENDENCY_USAGE.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-views:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-views:$NEW_VERSION\")/g" DEPENDENCY_USAGE.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-core:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-core:$NEW_VERSION\")/g" DEPENDENCY_USAGE.md
+# No publishing dependencies to update
 
 # Update CHANGELOG.md
 echo "Updating CHANGELOG.md..."
@@ -54,6 +48,4 @@ echo "Next steps:"
 echo "1. Review the changes: git diff"
 echo "2. Commit the changes: git add . && git commit -m \"chore: bump version to $NEW_VERSION\""
 echo "3. Create a tag: git tag v$NEW_VERSION"
-echo "4. Push changes: git push origin main --tags"
-echo ""
-echo "JitPack will automatically build and publish the new version." 
+echo "4. Push changes: git push origin main --tags" 

@@ -66,13 +66,13 @@ dependencyResolutionManagement {
 // build.gradle.kts
 dependencies {
     // For Compose apps
-    implementation("com.github.smartbackdrop:smartbackdrop-compose:0.1.0")
+    implementation(project(":smartbackdrop-compose"))
     
     // For View-based apps
-    implementation("com.github.smartbackdrop:smartbackdrop-views:0.1.0")
+    implementation(project(":smartbackdrop-views"))
     
     // Core module (automatically included as transitive dependency)
-    // implementation("com.github.smartbackdrop:smartbackdrop-core:0.1.0")
+    // implementation(project(":smartbackdrop-core"))
 }
 ```
 
