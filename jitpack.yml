@@ -20,14 +20,9 @@ install:
 script:
   - echo "Building project..."
   - ./gradlew clean build
-  - echo "Publishing to JitPack..."
-  - ./gradlew publishToMavenLocal
 
 after_success:
   - echo "Build completed successfully!"
 
-# Publish all modules
-publish:
-  - smartbackdrop-core
-  - smartbackdrop-compose  
-  - smartbackdrop-views 
+# JitPack will automatically publish these modules when a tag is pushed
+# The modules are defined in their respective build.gradle.kts files 
