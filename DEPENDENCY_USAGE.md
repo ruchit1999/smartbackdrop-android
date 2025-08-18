@@ -25,13 +25,13 @@ Add to your `build.gradle.kts`:
 ```kotlin
 dependencies {
     // For Compose apps
-    implementation("com.github.smartbackdrop:smartbackdrop-android:compose:1.0.0")
+    implementation("com.github.smartbackdrop:smartbackdrop-compose:0.1.0")
     
     // For View-based apps
-    implementation("com.github.smartbackdrop:smartbackdrop-android:views:1.0.0")
+    implementation("com.github.smartbackdrop:smartbackdrop-views:0.1.0")
     
-    // Core module (included automatically)
-    implementation("com.github.smartbackdrop:smartbackdrop-android:core:1.0.0")
+    // Core module (included automatically as transitive dependency)
+    // implementation("com.github.smartbackdrop:smartbackdrop-core:0.1.0")
 }
 ```
 
@@ -39,7 +39,7 @@ dependencies {
 
 ### Core Module
 ```kotlin
-implementation("com.github.smartbackdrop:smartbackdrop-android:core:1.0.0")
+implementation("com.github.smartbackdrop:smartbackdrop-core:0.1.0")
 ```
 - Core algorithms and engine
 - Image analysis and backdrop generation
@@ -48,7 +48,7 @@ implementation("com.github.smartbackdrop:smartbackdrop-android:core:1.0.0")
 
 ### Compose Module
 ```kotlin
-implementation("com.github.smartbackdrop:smartbackdrop-android:compose:1.0.0")
+implementation("com.github.smartbackdrop:smartbackdrop-compose:0.1.0")
 ```
 - Jetpack Compose integration
 - `SmartBackdrop` composable
@@ -57,7 +57,7 @@ implementation("com.github.smartbackdrop:smartbackdrop-android:compose:1.0.0")
 
 ### Views Module
 ```kotlin
-implementation("com.github.smartbackdrop:smartbackdrop-android:views:1.0.0")
+implementation("com.github.smartbackdrop:smartbackdrop-views:0.1.0")
 ```
 - Traditional Android Views integration
 - `SmartBackdropView` custom view
@@ -71,8 +71,8 @@ Use specific release versions for stability:
 
 ```kotlin
 dependencies {
-    implementation("com.github.smartbackdrop:smartbackdrop-android:compose:v1.0.0")
-    implementation("com.github.smartbackdrop:smartbackdrop-android:views:v1.0.0")
+    implementation("com.github.smartbackdrop:smartbackdrop-compose:v0.1.0")
+    implementation("com.github.smartbackdrop:smartbackdrop-views:v0.1.0")
 }
 ```
 
@@ -81,8 +81,8 @@ Use the latest version from the main branch:
 
 ```kotlin
 dependencies {
-    implementation("com.github.smartbackdrop:smartbackdrop-android:compose:main-SNAPSHOT")
-    implementation("com.github.smartbackdrop:smartbackdrop-android:views:main-SNAPSHOT")
+    implementation("com.github.smartbackdrop:smartbackdrop-compose:main-SNAPSHOT")
+    implementation("com.github.smartbackdrop:smartbackdrop-views:main-SNAPSHOT")
 }
 ```
 
@@ -91,8 +91,8 @@ Use a specific commit hash for exact version control:
 
 ```kotlin
 dependencies {
-    implementation("com.github.smartbackdrop:smartbackdrop-android:compose:abc1234")
-    implementation("com.github.smartbackdrop:smartbackdrop-android:views:abc1234")
+    implementation("com.github.smartbackdrop:smartbackdrop-compose:abc1234")
+    implementation("com.github.smartbackdrop:smartbackdrop-views:abc1234")
 }
 ```
 
@@ -101,8 +101,8 @@ Use a specific branch:
 
 ```kotlin
 dependencies {
-    implementation("com.github.smartbackdrop:smartbackdrop-android:compose:develop")
-    implementation("com.github.smartbackdrop:smartbackdrop-android:views:develop")
+    implementation("com.github.smartbackdrop:smartbackdrop-compose:develop")
+    implementation("com.github.smartbackdrop:smartbackdrop-views:develop")
 }
 ```
 
@@ -131,7 +131,7 @@ android {
 }
 
 dependencies {
-    implementation("com.github.smartbackdrop:smartbackdrop-android:compose:1.0.0")
+    implementation("com.github.smartbackdrop:smartbackdrop-compose:0.1.0")
 }
 ```
 
@@ -156,7 +156,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.smartbackdrop:smartbackdrop-android:compose:1.0.0'
+    implementation 'com.github.smartbackdrop:smartbackdrop-compose:0.1.0'
 }
 ```
 
@@ -217,7 +217,7 @@ dependencyResolutionManagement {
 ```kotlin
 // Check available versions at: https://jitpack.io/#smartbackdrop/smartbackdrop-android
 // Use a valid version or commit hash
-implementation("com.github.smartbackdrop:smartbackdrop-android:compose:v1.0.0")
+implementation("com.github.smartbackdrop:smartbackdrop-compose:v0.1.0")
 ```
 
 #### Issue: Build errors
@@ -238,7 +238,7 @@ android {
 // Use the BOM to manage Compose versions
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2023.10.01"))
-    implementation("com.github.smartbackdrop:smartbackdrop-android:compose:1.0.0")
+    implementation("com.github.smartbackdrop:smartbackdrop-compose:0.1.0")
 }
 ```
 
@@ -246,7 +246,7 @@ dependencies {
 
 | SmartBackdrop Version | Android API | Kotlin Version | Compose Version |
 |----------------------|-------------|----------------|-----------------|
-| 1.0.0                | 21+         | 1.9.0+         | 1.5.0+          |
+| 0.1.0                | 21+         | 1.9.0+         | 1.5.0+          |
 
 ## 🔄 Updating Dependencies
 
@@ -276,29 +276,29 @@ Check for new versions at:
 ### 1. Use Release Versions
 ```kotlin
 // ✅ Good - Use release versions
-implementation("com.github.smartbackdrop:smartbackdrop-android:compose:v1.0.0")
+implementation("com.github.smartbackdrop:smartbackdrop-compose:v0.1.0")
 
 // ❌ Avoid - Using SNAPSHOT in production
-implementation("com.github.smartbackdrop:smartbackdrop-android:compose:main-SNAPSHOT")
+implementation("com.github.smartbackdrop:smartbackdrop-compose:main-SNAPSHOT")
 ```
 
 ### 2. Specify Versions Explicitly
 ```kotlin
 // ✅ Good - Explicit version
-implementation("com.github.smartbackdrop:smartbackdrop-android:compose:1.0.0")
+implementation("com.github.smartbackdrop:smartbackdrop-compose:0.1.0")
 
 // ❌ Avoid - Dynamic version
-implementation("com.github.smartbackdrop:smartbackdrop-android:compose:+")
+implementation("com.github.smartbackdrop:smartbackdrop-compose:+")
 ```
 
 ### 3. Use Appropriate Modules
 ```kotlin
 // ✅ Good - Use only what you need
-implementation("com.github.smartbackdrop:smartbackdrop-android:compose:1.0.0")
+implementation("com.github.smartbackdrop:smartbackdrop-compose:0.1.0")
 
 // ❌ Avoid - Including unnecessary modules
-implementation("com.github.smartbackdrop:smartbackdrop-android:core:1.0.0")
-implementation("com.github.smartbackdrop:smartbackdrop-android:compose:1.0.0")
+implementation("com.github.smartbackdrop:smartbackdrop-core:0.1.0")
+implementation("com.github.smartbackdrop:smartbackdrop-compose:0.1.0")
 ```
 
 ## 📞 Support

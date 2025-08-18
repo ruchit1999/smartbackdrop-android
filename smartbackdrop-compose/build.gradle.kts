@@ -51,7 +51,7 @@ afterEvaluate {
                 
                 groupId = "com.github.smartbackdrop"
                 artifactId = "smartbackdrop-compose"
-                version = "1.0.0"
+                version = libs.versions.version.name.get()
                 
                 pom {
                     name.set("SmartBackdrop Compose")

@@ -80,10 +80,10 @@ jobs:
           ```kotlin
           dependencies {
               // For Compose apps
-              implementation("com.github.smartbackdrop:smartbackdrop-android:compose:${{ github.ref_name }}")
+              implementation("com.github.smartbackdrop:smartbackdrop-compose:${{ github.ref_name }}")
               
               // For View-based apps
-              implementation("com.github.smartbackdrop:smartbackdrop-android:views:${{ github.ref_name }}")
+              implementation("com.github.smartbackdrop:smartbackdrop-views:${{ github.ref_name }}")
           }
           ```
           
@@ -124,4 +124,5 @@ jobs:
         echo "Updating documentation links..."
         # Update version references in documentation if needed
         sed -i 's/version = ".*"/version = "${{ github.ref_name }}"/g' README.md
-        sed -i 's/implementation("com.github.smartbackdrop:smartbackdrop-android:.*")/implementation("com.github.smartbackdrop:smartbackdrop-android:${{ github.ref_name }}")/g' README.md QUICKSTART.md 
+        sed -i 's/implementation("com.github.smartbackdrop:smartbackdrop-compose:.*")/implementation("com.github.smartbackdrop:smartbackdrop-compose:${{ github.ref_name }}")/g' README.md QUICKSTART.md
+        sed -i 's/implementation("com.github.smartbackdrop:smartbackdrop-views:.*")/implementation("com.github.smartbackdrop:smartbackdrop-views:${{ github.ref_name }}")/g' README.md QUICKSTART.md 

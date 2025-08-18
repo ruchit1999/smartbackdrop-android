@@ -28,21 +28,21 @@ sed -i "s/version = \"[^\"]*\"/version = \"$NEW_VERSION\"/g" smartbackdrop-views
 
 # Update README.md
 echo "Updating README.md..."
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-android:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-android:$NEW_VERSION\")/g" README.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-android:compose:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-android:compose:$NEW_VERSION\")/g" README.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-android:views:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-android:views:$NEW_VERSION\")/g" README.md
+sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:$NEW_VERSION\")/g" README.md
+sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-views:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-views:$NEW_VERSION\")/g" README.md
+sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-core:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-core:$NEW_VERSION\")/g" README.md
 
 # Update QUICKSTART.md
 echo "Updating QUICKSTART.md..."
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-android:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-android:$NEW_VERSION\")/g" QUICKSTART.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-android:compose:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-android:compose:$NEW_VERSION\")/g" QUICKSTART.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-android:views:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-android:views:$NEW_VERSION\")/g" QUICKSTART.md
+sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:$NEW_VERSION\")/g" QUICKSTART.md
+sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-views:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-views:$NEW_VERSION\")/g" QUICKSTART.md
+sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-core:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-core:$NEW_VERSION\")/g" QUICKSTART.md
 
 # Update DEPENDENCY_USAGE.md
 echo "Updating DEPENDENCY_USAGE.md..."
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-android:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-android:$NEW_VERSION\")/g" DEPENDENCY_USAGE.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-android:compose:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-android:compose:$NEW_VERSION\")/g" DEPENDENCY_USAGE.md
-sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-android:views:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-android:views:$NEW_VERSION\")/g" DEPENDENCY_USAGE.md
+sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-compose:$NEW_VERSION\")/g" DEPENDENCY_USAGE.md
+sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-views:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-views:$NEW_VERSION\")/g" DEPENDENCY_USAGE.md
+sed -i "s/implementation(\"com.github.smartbackdrop:smartbackdrop-core:[^\"]*\")/implementation(\"com.github.smartbackdrop:smartbackdrop-core:$NEW_VERSION\")/g" DEPENDENCY_USAGE.md
 
 # Update CHANGELOG.md
 echo "Updating CHANGELOG.md..."

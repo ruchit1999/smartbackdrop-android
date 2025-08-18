@@ -1,29 +1,11 @@
-# SmartBackdrop Android SDK
-
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.9.0-blue.svg)](https://kotlinlang.org)
-[![Android](https://img.shields.io/badge/Android-API%2021+-green.svg)](https://developer.android.com)
-[![JitPack](https://jitpack.io/v/smartbackdrop/smartbackdrop-android.svg)](https://jitpack.io/#smartbackdrop/smartbackdrop-android)
-
-Auto-generates context-aware backdrops (gradient/blur/mirror/solid) from images to fill letterboxing gaps and keep text readable. Perfect for video players, image galleries, and media apps.
-
-## 🖼️ Demo
-
-<div align="center">
-  <img src="resource/Screenshot_1.png" alt="SmartBackdrop Demo - Strategy Selection" width="300" />
-  <img src="resource/Screenshot_2.png" alt="SmartBackdrop Demo - Live Preview" width="300" />
-</div>
-
-*Interactive strategy selection and live backdrop preview with different effects*
-
-## 🎉 SmartBackdrop Android SDK v1.0.0 - Initial Release
+# 🎉 SmartBackdrop Android SDK v0.1.0 - Initial Release
 
 ## 🚀 Release Title
-**SmartBackdrop Android SDK v1.0.0 - Intelligent Image Backdrops for Android Apps**
+**SmartBackdrop Android SDK v0.1.0 - Intelligent Image Backdrops for Android Apps**
 
 ## 📝 Release Notes
 
-### ✨ What's New in v1.0.0
+### ✨ What's New in v0.1.0
 
 We're excited to announce the initial release of **SmartBackdrop Android SDK** - a powerful library that automatically generates beautiful, context-aware backdrops from images to enhance your Android apps!
 
@@ -84,10 +66,13 @@ dependencyResolutionManagement {
 // build.gradle.kts
 dependencies {
     // For Compose apps
-    implementation("com.github.smartbackdrop:smartbackdrop-android:compose:1.0.0")
+    implementation("com.github.smartbackdrop:smartbackdrop-compose:0.1.0")
     
     // For View-based apps
-    implementation("com.github.smartbackdrop:smartbackdrop-android:views:1.0.0")
+    implementation("com.github.smartbackdrop:smartbackdrop-views:0.1.0")
+    
+    // Core module (automatically included as transitive dependency)
+    // implementation("com.github.smartbackdrop:smartbackdrop-core:0.1.0")
 }
 ```
 
@@ -149,8 +134,8 @@ Included with this release is a comprehensive sample app that demonstrates:
 #### 🖼️ Demo Screenshots
 
 <div align="center">
-  <img src="resource/Screenshot_1.png" alt="SmartBackdrop Demo - Strategy Selection" width="300" />
-  <img src="resource/Screenshot_2.png" alt="SmartBackdrop Demo - Live Preview" width="300" />
+  <img src="resource/Screenshot_1.png" alt="SmartBackdrop Demo - Strategy Selection" width="1080" />
+  <img src="resource/Screenshot_2.png" alt="SmartBackdrop Demo - Live Preview" width="1080" />
 </div>
 
 *Left: Interactive strategy selection with real-time controls | Right: Live backdrop preview with different effects*
@@ -249,4 +234,4 @@ This is just the beginning! We're already planning:
 
 **Made with ❤️ for the Android community**
 
-*SmartBackdrop Android SDK v1.0.0 - Transforming images into beautiful backdrops* 
+*SmartBackdrop Android SDK v0.1.0 - Transforming images into beautiful backdrops* 
