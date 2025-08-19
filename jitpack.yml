@@ -1,20 +1,10 @@
 jdk:
   - openjdk17
 
-env:
-  - ANDROID_HOME=$HOME/android-sdk
-  - PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
-
 before_install:
-  - echo "Setting up Android SDK..."
-  - export ANDROID_HOME=$HOME/android-sdk
-  - export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
-  - mkdir -p $ANDROID_HOME/cmdline-tools
-  - wget -q https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -O commandlinetools.zip
-  - unzip -q commandlinetools.zip -d $ANDROID_HOME/cmdline-tools
-  - mv $ANDROID_HOME/cmdline-tools/cmdline-tools $ANDROID_HOME/cmdline-tools/latest
-  - yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
-  - $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
+  - echo "Checking environment..."
+  - echo "Java version: $(java -version)"
+  - echo "Gradle version: $(./gradlew --version)"
 
 install:
   - echo "Installing dependencies..."
@@ -22,16 +12,18 @@ install:
 
 script:
   - echo "Building project..."
-  - echo "Java version: $(java -version)"
-  - echo "Gradle version: $(./gradlew --version)"
-  - echo "Android SDK location: $ANDROID_HOME"
-  - ./gradlew clean :smartbackdrop-core:build :smartbackdrop-compose:build :smartbackdrop-views:build
-  - ./gradlew :smartbackdrop-core:publishToMavenLocal
-  - ./gradlew :smartbackdrop-compose:publishToMavenLocal
-  - ./gradlew :smartbackdrop-views:publishToMavenLocal
+  - ./gradlew clean build --stacktrace
+  - echo "Publishing to Maven local..."
+  - ./gradlew publishToMavenLocal --stacktrace
+  - echo "Verifying artifacts..."
+  - ./gradlew :smartbackdrop-core:assembleRelease
+  - ./gradlew :smartbackdrop-compose:assembleRelease
+  - ./gradlew :smartbackdrop-views:assembleRelease
 
 after_success:
   - echo "Build completed successfully!"
+  - echo "Checking generated artifacts..."
+  - find ~/.m2/repository -name "*smartbackdrop*" -type d | head -10
 
 # JitPack will automatically publish these modules when a tag is pushed:
 # - smartbackdrop-core

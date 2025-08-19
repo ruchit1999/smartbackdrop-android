@@ -3,7 +3,7 @@
 agp = "8.2.2"
 kotlin = "1.9.22"
 compose-compiler = "1.5.8"
-compose-bom = "2024.10.01"
+compose-bom = "2024.02.00"
 
 # Dependencies
 coil = "2.7.0"
@@ -16,12 +16,14 @@ androidx-test-core = "1.7.0"
 androidx-test-ext = "1.3.0"
 espresso = "3.7.0"
 accompanist = "0.34.0"
+kotlinx-coroutines = "1.7.3"
+androidx-annotation = "1.7.1"
 
 # Project
 version-name = "0.1.0"
 min-sdk = "21"
-target-sdk = "35"
-compile-sdk = "35"
+target-sdk = "34"
+compile-sdk = "34"
 
 [libraries]
 # Compose
@@ -49,6 +51,10 @@ robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "
 androidx-test-core = { group = "androidx.test", name = "core", version.ref = "androidx-test-core" }
 androidx-test-ext = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext" }
 espresso = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+
+# Kotlin
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "androidx-annotation" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

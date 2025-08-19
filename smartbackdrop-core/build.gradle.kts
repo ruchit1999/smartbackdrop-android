@@ -77,8 +77,8 @@ afterEvaluate {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-    implementation("androidx.annotation:annotation:1.7.1")
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.annotation)
     
     testImplementation(libs.junit)
     testImplementation(libs.robolectric)
