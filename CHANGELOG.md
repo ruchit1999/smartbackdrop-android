@@ -113,6 +113,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version History
 
+### Version 0.1.4
+- Enhanced release with improved stability
+- Optimized build configuration
+- Clean project structure without publishing overhead
+- Updated documentation and examples
+
 ### Version 1.0.0
 - Initial open source release
 - Complete backdrop generation system

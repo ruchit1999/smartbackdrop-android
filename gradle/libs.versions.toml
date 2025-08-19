@@ -20,7 +20,7 @@ kotlinx-coroutines = "1.7.3"
 androidx-annotation = "1.7.1"
 
 # Project
-version-name = "0.1.0"
+version-name = "0.1.4"
 min-sdk = "21"
 target-sdk = "34"
 compile-sdk = "34"

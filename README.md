@@ -1,11 +1,11 @@
-# 🎉 SmartBackdrop Android SDK v0.1.0 - Initial Release
+# 🎉 SmartBackdrop Android SDK v0.1.4 - Enhanced Release
 
 ## 🚀 Release Title
-**SmartBackdrop Android SDK v0.1.0 - Intelligent Image Backdrops for Android Apps**
+**SmartBackdrop Android SDK v0.1.4 - Intelligent Image Backdrops for Android Apps**
 
 ## 📝 Release Notes
 
-### ✨ What's New in v0.1.0
+### ✨ What's New in v0.1.4
 
 We're excited to announce the initial release of **SmartBackdrop Android SDK** - a powerful library that automatically generates beautiful, context-aware backdrops from images to enhance your Android apps!
 
@@ -66,13 +66,13 @@ dependencyResolutionManagement {
 // build.gradle.kts
 dependencies {
     // For Compose apps
-    implementation("com.github.ruchit1999:smartbackdrop-compose:0.1.0")
+    implementation("com.github.ruchit1999:smartbackdrop-compose:0.1.4")
     
     // For View-based apps
-    implementation("com.github.ruchit1999:smartbackdrop-views:0.1.0")
+    implementation("com.github.ruchit1999:smartbackdrop-views:0.1.4")
     
     // Core module (automatically included as transitive dependency)
-    // implementation("com.github.ruchit1999:smartbackdrop-core:0.1.0")
+    // implementation("com.github.ruchit1999:smartbackdrop-core:0.1.4")
 }
 ```
 
@@ -226,8 +226,8 @@ This is just the beginning! We're already planning:
 This SDK is configured for JitPack publishing. Once a release tag is pushed, it will be available as:
 
 ```kotlin
-implementation("com.github.ruchit1999:smartbackdrop-compose:0.1.0")
-implementation("com.github.ruchit1999:smartbackdrop-views:0.1.0")
+implementation("com.github.ruchit1999:smartbackdrop-compose:0.1.4")
+implementation("com.github.ruchit1999:smartbackdrop-views:0.1.4")
 ```
 
 **For now, you can:**
@@ -250,4 +250,4 @@ implementation("com.github.ruchit1999:smartbackdrop-views:0.1.0")
 
 **Made with ❤️ for the Android community**
 
-*SmartBackdrop Android SDK v0.1.0 - Transforming images into beautiful backdrops* 
+*SmartBackdrop Android SDK v0.1.4 - Transforming images into beautiful backdrops* 

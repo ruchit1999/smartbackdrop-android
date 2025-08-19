@@ -25,10 +25,10 @@ Add to your `build.gradle.kts`:
 ```kotlin
 dependencies {
     // For Compose apps
-    implementation("com.github.ruchit1999:smartbackdrop-compose:0.1.0")
+    implementation("com.github.ruchit1999:smartbackdrop-compose:0.1.4")
     
     // For View-based apps
-    implementation("com.github.ruchit1999:smartbackdrop-views:0.1.0")
+    implementation("com.github.ruchit1999:smartbackdrop-views:0.1.4")
 }
 ```
 
