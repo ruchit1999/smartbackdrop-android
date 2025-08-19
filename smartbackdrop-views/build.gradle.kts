@@ -35,7 +35,7 @@ android {
     }
 }
 
-// Publishing configuration
+// Publishing configuration for JitPack
 afterEvaluate {
     publishing {
         publications {
@@ -49,7 +49,7 @@ afterEvaluate {
                 pom {
                     name.set("SmartBackdrop Views")
                     description.set("Traditional Android Views integration for SmartBackdrop Android SDK")
-                    url.set("https://github.com/smartbackdrop/smartbackdrop-android")
+                    url.set("https://github.com/ruchit1999/smartbackdrop-android")
                     
                     licenses {
                         license {
@@ -60,31 +60,19 @@ afterEvaluate {
                     
                     developers {
                         developer {
-                            id.set("smartbackdrop")
-                            name.set("SmartBackdrop Team")
+                            id.set("ruchit1999")
+                            name.set("Ruchit Bhagat")
                             email.set("ruchitbhagat11@gmail.com")
                         }
                     }
                     
                     scm {
-                        connection.set("scm:git:git://github.com/smartbackdrop/smartbackdrop-android.git")
-                        developerConnection.set("scm:git:ssh://github.com:smartbackdrop/smartbackdrop-android.git")
-                        url.set("https://github.com/smartbackdrop/smartbackdrop-android")
+                        connection.set("scm:git:git://github.com/ruchit1999/smartbackdrop-android.git")
+                        developerConnection.set("scm:git:ssh://github.com:ruchit1999/smartbackdrop-android.git")
+                        url.set("https://github.com/ruchit1999/smartbackdrop-android")
                     }
                 }
             }
-        }
-        
-        repositories {
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/ruchit1999/smartbackdrop-android")
-                credentials {
-                    username = System.getenv("GITHUB_USERNAME") ?: project.findProperty("gpr.user") as String?
-                    password = System.getenv("GITHUB_TOKEN") ?: project.findProperty("gpr.key") as String?
-                }
-            }
-            maven { url = uri("https://jitpack.io") }
         }
     }
 }
@@ -98,15 +86,6 @@ dependencies {
     testImplementation(libs.androidx.test.core)
     androidTestImplementation(libs.androidx.test.ext)
     androidTestImplementation(libs.espresso)
-
-    // For Compose apps
-    implementation("com.github.ruchit1999:smartbackdrop-compose:0.1.0")
-    
-    // For View-based apps
-    implementation("com.github.ruchit1999:smartbackdrop-views:0.1.0")
-    
-    // Core module (automatically included)
-    // implementation("com.github.ruchit1999:smartbackdrop-core:0.1.0")
 }
 
 

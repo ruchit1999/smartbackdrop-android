@@ -28,7 +28,7 @@ android {
     }
 }
 
-// Publishing configuration
+// Publishing configuration for JitPack
 afterEvaluate {
     publishing {
         publications {
@@ -42,7 +42,7 @@ afterEvaluate {
                 pom {
                     name.set("SmartBackdrop Compose")
                     description.set("Jetpack Compose integration for SmartBackdrop Android SDK")
-                    url.set("https://github.com/smartbackdrop/smartbackdrop-android")
+                    url.set("https://github.com/ruchit1999/smartbackdrop-android")
                     
                     licenses {
                         license {
@@ -53,28 +53,17 @@ afterEvaluate {
                     
                     developers {
                         developer {
-                            id.set("smartbackdrop")
-                            name.set("SmartBackdrop Team")
+                            id.set("ruchit1999")
+                            name.set("Ruchit Bhagat")
                             email.set("ruchitbhagat11@gmail.com")
                         }
                     }
                     
                     scm {
-                        connection.set("scm:git:git://github.com/smartbackdrop/smartbackdrop-android.git")
-                        developerConnection.set("scm:git:ssh://github.com:smartbackdrop/smartbackdrop-android.git")
-                        url.set("https://github.com/smartbackdrop/smartbackdrop-android")
+                        connection.set("scm:git:git://github.com/ruchit1999/smartbackdrop-android.git")
+                        developerConnection.set("scm:git:ssh://github.com:ruchit1999/smartbackdrop-android.git")
+                        url.set("https://github.com/ruchit1999/smartbackdrop-android")
                     }
-                }
-            }
-        }
-        
-        repositories {
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/ruchit1999/smartbackdrop-android")
-                credentials {
-                    username = System.getenv("GITHUB_USERNAME") ?: project.findProperty("gpr.user") as String?
-                    password = System.getenv("GITHUB_TOKEN") ?: project.findProperty("gpr.key") as String?
                 }
             }
         }

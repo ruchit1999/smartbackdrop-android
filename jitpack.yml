@@ -1,15 +1,18 @@
 jdk:
   - openjdk17
 
+env:
+  - ANDROID_HOME=$HOME/android-sdk
+  - PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
+
 before_install:
   - echo "Setting up Android SDK..."
   - export ANDROID_HOME=$HOME/android-sdk
-  - export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-  - mkdir -p $ANDROID_HOME
-  - wget -q https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -O commandlinetools.zip
-  - unzip -q commandlinetools.zip -d $ANDROID_HOME
+  - export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
   - mkdir -p $ANDROID_HOME/cmdline-tools
-  - mv $ANDROID_HOME/cmdline-tools $ANDROID_HOME/cmdline-tools/latest
+  - wget -q https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -O commandlinetools.zip
+  - unzip -q commandlinetools.zip -d $ANDROID_HOME/cmdline-tools
+  - mv $ANDROID_HOME/cmdline-tools/cmdline-tools $ANDROID_HOME/cmdline-tools/latest
   - yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
   - $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
 
@@ -19,10 +22,23 @@ install:
 
 script:
   - echo "Building project..."
-  - ./gradlew clean build
+  - echo "Java version: $(java -version)"
+  - echo "Gradle version: $(./gradlew --version)"
+  - echo "Android SDK location: $ANDROID_HOME"
+  - ./gradlew clean :smartbackdrop-core:build :smartbackdrop-compose:build :smartbackdrop-views:build
+  - ./gradlew :smartbackdrop-core:publishToMavenLocal
+  - ./gradlew :smartbackdrop-compose:publishToMavenLocal
+  - ./gradlew :smartbackdrop-views:publishToMavenLocal
 
 after_success:
   - echo "Build completed successfully!"
 
-# JitPack will automatically publish these modules when a tag is pushed
-# The modules are defined in their respective build.gradle.kts files 
+# JitPack will automatically publish these modules when a tag is pushed:
+# - smartbackdrop-core
+# - smartbackdrop-compose  
+# - smartbackdrop-views
+#
+# Usage in other projects:
+# implementation 'com.github.ruchit1999:smartbackdrop-core:VERSION'
+# implementation 'com.github.ruchit1999:smartbackdrop-compose:VERSION'
+# implementation 'com.github.ruchit1999:smartbackdrop-views:VERSION' 
