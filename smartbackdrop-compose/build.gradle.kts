@@ -38,33 +38,6 @@ afterEvaluate {
                 groupId = "com.github.ruchit1999"
                 artifactId = "smartbackdrop-compose"
                 version = libs.versions.version.name.get()
-                
-                pom {
-                    name.set("SmartBackdrop Compose")
-                    description.set("Jetpack Compose integration for SmartBackdrop Android SDK")
-                    url.set("https://github.com/ruchit1999/smartbackdrop-android")
-                    
-                    licenses {
-                        license {
-                            name.set("MIT License")
-                            url.set("https://opensource.org/licenses/MIT")
-                        }
-                    }
-                    
-                    developers {
-                        developer {
-                            id.set("ruchit1999")
-                            name.set("Ruchit Bhagat")
-                            email.set("ruchitbhagat11@gmail.com")
-                        }
-                    }
-                    
-                    scm {
-                        connection.set("scm:git:git://github.com/ruchit1999/smartbackdrop-android.git")
-                        developerConnection.set("scm:git:ssh://github.com:ruchit1999/smartbackdrop-android.git")
-                        url.set("https://github.com/ruchit1999/smartbackdrop-android")
-                    }
-                }
             }
         }
     }
