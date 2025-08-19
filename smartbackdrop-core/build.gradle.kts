@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    `maven-publish`
 }
 
 android {
@@ -33,7 +34,20 @@ android {
     }
 }
 
+// Publishing configuration for JitPack
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
 
+                groupId = "com.github.ruchit1999"
+                artifactId = "smartbackdrop-core"
+                version = libs.versions.version.name.get()
+            }
+        }
+    }
+}
 
 dependencies {
     implementation(libs.kotlinx.coroutines.android)
